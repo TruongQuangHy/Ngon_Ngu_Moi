@@ -3,26 +3,7 @@ import { NavLink, Link } from 'react-router-dom'
 import { BsSearch } from 'react-icons/bs'
 const Header = () => {
     return (<>
-        <header className="header-top-strip py-3">
-            <div className='container-xxl'>
-                <div className='row'>
-                    <div className='col-6'>
-                        <p className='text-white mb-0'>
-                            Free Ship khi mua trên 200.000đ
-                        </p>
-                    </div>
-                    <div className='col-6'>
-                        <p className='text-end text-white mb-0'>
-                            Hotline:
-                            <a className='text-white' href='tel:+84 931305101'>
-                                +84 931305101
-                            </a>
-                        </p>
 
-                    </div>
-                </div>
-            </div>
-        </header>
 
         <header className="header-upper py-3">
             <div className='container-xxl'>
@@ -45,36 +26,29 @@ const Header = () => {
                     </div>
                     <div className='col-5'>
                         <div className='header-upper-links d-flex align-items-center justify-content-between'>
+
                             <div>
-                                <Link className='d-flex align-items-center gap-10 text-white'>
-                                    <img src='images/images/compare.svg' alt='compare' />
-                                    <p className='mb-0'>
-                                        Compare <br /> Products
-                                    </p>
-                                </Link>
-                            </div>
-                            <div>
-                                <Link className='d-flex align-items-center gap-10 text-white'>
+                                <Link to="/wishlist" className='d-flex align-items-center gap-10 text-white'>
                                     <img src='images/images/wishlist.svg' alt='wishlist' />
                                     <p className='mb-0'>
-                                        Favourite <br /> wishlist
+                                        <Link to="/wishlist">Danh Sách yêu thích</Link>
                                     </p>
                                 </Link>
                             </div>
                             <div>
-                                <Link className='d-flex align-items-center gap-10 text-white'>
+                                <Link to="/login" className='d-flex align-items-center gap-10 text-white'>
                                     <img src='images/images/user.svg' alt='user' />
                                     <p className='mb-0'>
-                                        Log in <br /> user
+                                        <Link to="/login">Login</Link>
                                     </p>
                                 </Link>
                             </div>
                             <div>
-                                <Link className='d-flex align-items-center gap-10 text-white'>
+                                <Link to="/cart" className='d-flex align-items-center gap-10 text-white'>
                                     <img src='images/images/cart.svg' alt='cart' />
                                     <div className='d-flex flex-column gap-10'>
                                         <span className='badge bg-white text-dark'>0</span>
-                                        <p className='mb-0'>500đ</p>
+                                        <p className='mb-0'>giá tiền</p>
                                     </div>
 
                                 </Link>
@@ -100,17 +74,17 @@ const Header = () => {
                                     </button>
                                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li>
-                                            <Link className="dropdown-item text-white" to="">
+                                            <Link className="dropdown-item text-white" to="/product">
                                                 Nam
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link className="dropdown-item text-white" to="">
+                                            <Link className="dropdown-item text-white" to="/product">
                                                 Nữ
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link className="dropdown-item text-white" to="">
+                                            <Link className="dropdown-item text-white" to="/product">
                                                 Unisex
                                             </Link>
                                         </li>
@@ -119,10 +93,10 @@ const Header = () => {
                             </div>
                             <div className='menu-links'>
                                 <div className='d-flex align-items-center gap-15'>
-                                    <NavLink to="/">Home</NavLink>
-                                    <NavLink to="/">Our Store</NavLink>
-                                    <NavLink to="/">Blogs</NavLink>
-                                    <NavLink to="/contact">Contact</NavLink>
+                                    <NavLink to="/">Trang chủ</NavLink>
+                                    <NavLink to="/product">Sản phẩm</NavLink>
+                                    <NavLink to="/contact">Liên hệ</NavLink>
+
                                 </div>
                             </div>
 

@@ -1,7 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { BsLinkedin, BsInstagram, BsYoutube, BsFacebook } from 'react-icons/bs'
+
+// import GoogleMapReact from 'google-map-react';
 const Footer = () => {
+    // const handleApiLoaded = (map, maps) => {
+    //     // use map and maps objects
+    // };
     return (
         <>
             <footer className='footer py-4'>
@@ -39,23 +44,23 @@ const Footer = () => {
                                 <address className='text-white fs-6'>
                                     Làm việc từ (08h00 - 21h00)
                                 </address>
-                                <a href='Phone:+84 931305101' className='mt-4 d-block mb-3'>
+                                <a href='Phone:+84 931305101' className='style="color: red'>
                                     +84 931305101
                                 </a>
                                 <a href='Mail: phamhoailinh779@gmail.com' className='mt-4 d-block mb-3'>
                                     phamhoailinh779@gmail.com
                                 </a>
                                 <div className='social_icons d-flex align-items-center gap-30 mt-4'>
-                                    <a className='text-white' href=''>
+                                    <a className='text-white' href='https://www.linkedin.com/in/PHLL/'>
                                         <BsLinkedin className="fs-4" />
                                     </a>
-                                    <a className='text-white' href=''>
+                                    <a className='text-white' href='https://www.instagram.com/phlinh1301/'>
                                         <BsInstagram className="fs-4" />
                                     </a>
-                                    <a className='text-white' href=''>
+                                    <a className='text-white' href='https://www.youtube.com/'>
                                         <BsYoutube className="fs-4" />
                                     </a>
-                                    <a className='text-white' href=''>
+                                    <a className='text-white' href='https://www.facebook.com/profile.php?id=100021768332793'>
                                         <BsFacebook className="fs-4" />
                                     </a>
                                 </div>
@@ -75,15 +80,16 @@ const Footer = () => {
                             <h4 className='text-white mb-4'>Account</h4>
                             <div></div>
                         </div> */}
-                        <div className='col-2'>
-                            <h4 className='text-white mb-4'>Account</h4>
-                            <div className='footer-link d-flex flex-column'>
-                                <Link className='text-white py-2 mb-1'>About us</Link>
-                                <Link className='text-white py-2 mb-1'>Fag</Link>
-                                <Link className='text-white py-2 mb-1'>Contact</Link>
-
-
-                            </div>
+                        <div className='col-3'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4205948970844!2d106.78290865037893!3d10.855580060658136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175276e7ea103df%3A0xb6cf10bb7d719327!2sThu%20Duc%20Campus%20Hutech%20khu%20E!5e0!3m2!1svi!2s!4v1680797004913!5m2!1svi!2s"
+                                width="600"
+                                height="240"
+                                className='border-0'
+                                allowfullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
                     </div>
 
