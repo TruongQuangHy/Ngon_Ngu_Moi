@@ -12,13 +12,15 @@ const categoryRouter = require('./routes/productcategoryRoute');
 const blogCatRouter = require('./routes/blogCatRoute');
 const brandRouter = require('./routes/brandRoute');
 const couponRouter = require('./routes/couponRoute');
+const uploadRouter = require('./routes/uploadRoute');
 
 
 const cookieParser = require("cookie-parser");
 const morgan = require('morgan');
-
+const cors = require('cors')
 app.use(morgan('dev'))
 dbConnect();
+app.use(cors())
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -31,6 +33,8 @@ app.use('/api/category', categoryRouter)
 app.use('/api/blogcategory', blogCatRouter)
 app.use('/api/brand', brandRouter)
 app.use('/api/coupon', couponRouter)
+app.use('/api/upload', uploadRouter)
+
 
 
 app.use(notFound);
